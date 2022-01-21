@@ -1,0 +1,15 @@
+<div class="_header">
+  <h1 class="_appName">BABULES</h1>
+  <nav class="_nav-bar">
+    <a class="_nav-item" routerLink="/list_of_categories">Categories</a>
+    <a class="_nav-item" routerLink="/list_of_operations">Activities</a>
+    <a class="_nav-item" routerLink="/report_generator">Звіти</a>
+    <a class="_nav-item" routerLink="/help">Допомога</a>
+    <button *ngIf="isLogged; else elseIsLogged" class="_nav-item logged" (click)="exit()">Вийти з аккаунта</button>
+    <ng-template #elseIsLogged>
+      <a class="_nav-item" routerLink="/login">Авторизуватись</a>
+    </ng-template>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

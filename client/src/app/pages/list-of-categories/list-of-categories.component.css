@@ -1,0 +1,37 @@
+/********************Tags********************/
+/**********Table**********/
+table, td, th {
+    border: 2px solid #e1e1e1;
+    padding-left: 10px;
+    font-size: 23px;
+}
+  
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+table tr:nth-child(even){background-color: #f9f9f9;}
+
+table tr:hover {background-color: #ddd;}
+
+th {
+    font-weight: normal;
+}
+
+/********************Classes********************/
+/**********Table**********/
+._table-title {
+    font-weight: bold;
+}
+
+
+/********************IDs********************/
+/**********Search input**********/
+#fCategory {
+    width: 440px;
+    padding: 0 20px 0 15px;
+    font-size: 21px;
+    border-radius: 15px;
+}

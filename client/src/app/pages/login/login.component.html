@@ -1,0 +1,18 @@
+<h1 class="_page-title">Вхід</h1>
+
+<div class="_full_width_container">
+    <form class="_add-edit_form">
+        <div class="_form_line">
+            <label for="email">Email</label>
+            <input #email class="_add-edit_input" type="text" id="_email" name="_email" placeholder="Введіть email">
+        </div>
+        <div class="_form_line">
+            <label for="password">Пароль</label>
+            <input #password class="_add-edit_input" type="password" id="_password" name="_password" placeholder="Введіть пароль">
+        </div>
+        <div class="_form_buttons">
+            <button class="_main-button" (click)="login(email.value, password.value)">Вхід</button>
+            <button class="_main-button" (click)="openRegisterPage()">Немає аккаунта</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<h1 class="_page-title">Реєстрація інформації про категорію доходів/витрат</h1>
+
+<div class="_full_width_container">
+    <form class="_add-edit_form">
+        <div class="_form_line">
+            <label for="_category">Назва категорії</label>
+            <input #title class="_add-edit_input" type="text" id="_category" name="_category" placeholder="Введіть назву категорії">
+        </div>
+        <div class="_form_line">
+            <label for="_description">Короткий опис</label>
+            <input #description class="_add-edit_input" type="text" id="_description" name="_description" placeholder="Введіть короткий опис">
+        </div>
+        <div class="_form_buttons">
+            <button class="_main-button" (click)="createNewCategory(title.value, description.value)">Зареєструвати</button>
+            <button class="_main-button" (click)="goBack()">Назад</button>
+        </div>
+    </form>
+</div>

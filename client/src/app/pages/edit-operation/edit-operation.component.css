@@ -1,0 +1,11 @@
+select {
+    font-size: 19px;
+    padding: 3px 13px;
+    width: 285px;
+}
+
+.input-date {
+    width: 285px;
+    font-size: 19px;
+    padding: 3px 13px;
+}

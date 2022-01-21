@@ -1,0 +1,36 @@
+<h1 class="_page-title">Редагування інформації про транзакції</h1>
+<div class="_full_width_container">
+    <form class="_add-edit_form">
+        <div class="_form_line">
+            <label for="_dateStart">Дата DD/MM/YYYY</label>
+            <input #dateStart class="_add-edit_input input-date" [(ngModel)]='_dateStart' type="date"  id="_dateStart" name="_dateStart">
+        </div>
+        <div class="_form_line">
+            <label for="_dateEnd">Дата DD/MM/YYYY</label>
+            <input #dateEnd class="_add-edit_input input-date" [(ngModel)]='_dateEnd' type="date"  id="_dateEnd" name="_dateEnd">
+        </div>
+        <div class="_form_line">
+            <label for="_operation-type">Тип операції</label>
+            <select [(ngModel)]='operationType' [ngModelOptions]="{standalone: true}">
+                <option value="Витрата">Витрата</option>
+            </select>
+        </div>
+        <div class="_form_line">
+            <label for="_categories">Назва категорії</label>
+            <select name="_categories" id="_categories" (change)="updateSelect($event)">
+                <option selected disabled></option>
+                <option *ngFor="let category of categories; let i = index" [value]="i">
+                  {{category.title}}
+                </option>
+            </select>
+        </div>
+        <div class="_form_buttons">
+            <button class="_main-button" (click)="generate(dateStart.value, dateEnd.value)">Згенерувати</button>
+            <button class="_main-button" (click)="clear()">Очистити</button>
+        </div>
+        <div class="_form_buttons">
+            <button class="_main-button" (click)="graphicReport(dateStart.value, dateEnd.value)">Графік</button>
+            <button class="_main-button" (click)="byDates()">По датам</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,97 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 2%;
+  padding-top: 70px;
+}
+/********************Tags********************/
+/**********Input**********/
+input {
+  border-style: solid;
+  border-color: #c9c9c9;
+}
+
+input:focus {
+  color: black;
+  border-color: #e2e2e2;
+  
+}
+
+::placeholder {
+  color: #c9c9c9;
+}
+
+/********************Classes********************/
+._page-title {
+  color: black;
+  margin: 50px 0 25px 0;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+._full_width_container {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  width: 96%;
+  height: auto;
+  margin-right: 2%;
+  margin-bottom: 30px;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+/**********Table Icon Buttons**********/
+._table-icon-button {
+  margin: 10px 10px;
+  padding: 5px 10px 0 12px;
+  border: 1px solid lightgray;
+}
+
+._table-icon-button:hover {
+  border-color: blue;
+  background-color: lightskyblue;
+}
+
+/**********Buttons**********/
+._main-button {
+  background: linear-gradient(#0083cc, #004acc);
+  color: white;
+  padding: 6px 20px;
+  border: 1px solid blue;
+  font-size: 20px;
+}
+
+._main-button:hover {
+  background: lightskyblue;
+  border-color: lightblue;
+}
+
+/**********Add/Edit Form**********/
+._form_line {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  height: auto;
+  font-size: 19px;
+}
+
+._add-edit_form {
+  margin-left: 200px;
+  border-radius: 6px;
+}
+
+._form_buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  margin-left: 220px
+}
+
+._add-edit_form * {
+  margin-bottom:  20px;
+}

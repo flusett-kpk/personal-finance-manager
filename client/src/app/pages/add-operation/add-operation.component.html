@@ -1,0 +1,36 @@
+<h1 class="_page-title">Реєстрація інформації про транзакції</h1>
+<div class="_full_width_container">
+    <form class="_add-edit_form">
+        <div class="_form_line">
+            <label for="_categories">Назва категорії</label>
+            <select name="_categories" id="_categories" (change)="updateSelect($event)">
+                <option selected disabled></option>
+                <option *ngFor="let category of categories; let i = index" [value]="i">
+                  {{category.title}}
+                </option>
+            </select>
+        </div>
+        <div class="_form_line">
+            <label for="_operation-type">Тип операції</label>
+            <select [(ngModel)]='operationType' [ngModelOptions]="{standalone: true}">
+                <option value="Витрата">Витрата</option>
+            </select>
+        </div>
+        <div class="_form_line">
+            <label for="_sum">Сума</label>
+            <input #sum class="_add-edit_input" type="number" id="_sum" name="_sum" placeholder="Введіть суму">
+        </div>
+        <div class="_form_line">
+            <label for="_description">Короткий опис</label>
+            <input #description class="_add-edit_input" type="text" id="_description" name="_description" placeholder="Введіть опис транзакції">
+        </div>
+        <div class="_form_line">
+            <label for="_date">Дата DD/MM/YYYY</label>
+            <input #date class="_add-edit_input input-date" [(ngModel)]='today' type="date"  id="_date" name="_date">
+        </div>
+        <div class="_form_buttons">
+            <button class="_main-button" (click)="addNewOperation(sum.value, description.value, date.value)">Зберегти</button>
+            <button class="_main-button" (click)="reload()">Очистити</button>
+        </div>
+    </form>
+</div>
